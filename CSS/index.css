@@ -1,56 +1,85 @@
 body {
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-image: url("../images/colorpencils.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #c7c5c5;
     color:brown;
+    
 }
-/*--Header--*/
+/*--HEADER--*/
 header{
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: 100vw;
+    min-width: 250px;
 }
 
-#navmenu{
-    display: flex;
-    justify-content: center;
+/*--------NavMenu--------*/
+#navmenu{ 
     width: 100vw;
+    background-color: rgb(157, 131, 65);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navlist{/* make grid*/
+    padding: 0 1em;
 }
 
 #navmenu ul{
-    display:flex;
-    min-width: 400px;
-    max-width: 1140px;
-    justify-content: space-around;
+    display: flex;
     flex-direction: row;
+   justify-content: space-between;
+    font-size: 1em;
     list-style-type: none;
+    margin: 1rem;
 }
 
-#navmenu a{
-    color: rgb(83, 50, 5);
-    margin: 2em;
+#navmenu li{
+    justify-content: space-between;
+    
+}
+
+#navmenu  a{
+    /*color: rgb(83, 50, 5);*/
+    color: black;
+    
+    margin: 1em;
     padding: 10px;
+    text-decoration: none;
+    text-shadow: 0 2px 2px #515253;
+    transition: transform 0.5s ease-in-out;
 }
 
-#navmenu a:hover{
-    color: rgb(121, 84, 36);
+#navmenu  a:hover, a:active {
     text-shadow: 1px 2px 0 #c7c5c5, 1px 3px 3px #d4d2d2;
 }
 
 
+/*--MAIN with sections--*/
 
-
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+}
 
 .title{
     width: 200px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
+    margin: 3rem auto 1rem auto;
     text-decoration-color: blueviolet;
     text-decoration: underline;
 }
@@ -65,6 +94,18 @@ header{
     align-items: center;
     margin: 0 auto;
     padding-top: 5px;
+}
+
+li {
+    color:blueviolet;
+}
+
+h2 {
+    font-size: medium;
+    color: black;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-style: italic;
 }
 
 .links {
@@ -84,7 +125,10 @@ header{
     width: 20px;
 }
 .about{
-align-content: baseline;
+align-content: center;
+align-items: center;
+max-width: 800px;
+min-width: 300px;
 }
 
 .connect{
@@ -95,23 +139,94 @@ align-content: baseline;
 
 }
 
-li {
-    color:blueviolet;
-}
-
-h2 {
-    font-size: medium;
-    color: black;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-}
-
-/*---Footer---*/
+/*---FOOTER---*/
 
 .rights{
     display: flex;
-    max-width: 1140px;
+    width: 100vw;
     justify-content: center;
     font-size: small;
+}
+
+/*---Responsive---*/
+@media screen and (min-width: 1200px){
+    #navmenu{ 
+        background-color: rgb(81, 219, 244);
+        transition: .4s;
+    }
+    p{
+        font-size: 1.2rem;
+        transition: .4s;
+    }
+
+    li{
+        transition: .4s;
+        font-size: 1.2rem;
+        color:rgb(6, 173, 203);
+    }
+
+    #navmenu ul{
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        transition: .4s;
+    }
+}
+
+@media screen and (max-width: 580px){
+    body{
+        background-color: #d4d2d2;
+        background-image: none;
+    }
+    #navmenu ul{
+        transition: .4s;
+        font-size: 12px;
+    }
+
+    p{
+        font-style: italic;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    #navmenu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        transition: .5s;
+    }
+    .title{
+        transition: .5s;
+        margin-top: 100px;
+        color: blueviolet;
+        text-decoration: none;
+    }
+    #navmenu  a:hover, a:active {
+        text-shadow: 1px 2px 0 #be15c1, 1px 3px 3px #2e0341;
+        transition: .2s;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+
+    .about{
+        width: 250px;
+        margin: 0 auto;
+        color:rgb(36, 2, 40);
+        transition: .5s;
+    }
+
+    .connect > li >a {
+        color: red;
+        text-decoration: underline;
+    }
+
+    .rights{
+        font-size: 10px;
+        color: black;
+    }
 }
