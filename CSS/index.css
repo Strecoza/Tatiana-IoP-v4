@@ -7,9 +7,8 @@ body {
     background-image: url("../images/colorpencils.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #c7c5c5;
+    background-color: rgb(157, 131, 65);
     color:brown;
-    
 }
 /*--HEADER--*/
 header{
@@ -71,7 +70,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2em auto;
+    margin: 2em auto 0 auto;
 }
 
 .title{
@@ -140,12 +139,19 @@ min-width: 300px;
 }
 
 /*---FOOTER---*/
-
-.rights{
+footer{
+    margin: 0;
+    padding: 0;
+}
+.rights  {
     display: flex;
     width: 100vw;
     justify-content: center;
-    font-size: small;
+    align-items: center;
+    font-size: 14px;
+    height: 20px;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 /*---Responsive---*/
@@ -170,6 +176,10 @@ min-width: 300px;
         align-items: center;
         font-size: 1.5rem;
         transition: .4s;
+    }
+    .rights{
+        font-size: 12px;
+        transition: .4;
     }
 }
 
@@ -208,6 +218,10 @@ min-width: 300px;
         text-shadow: 1px 2px 0 #be15c1, 1px 3px 3px #2e0341;
         transition: .2s;
     }
+    .rights{
+        font-size: 11px;
+        transition: .4;
+    }
 
 }
 
@@ -228,5 +242,6 @@ min-width: 300px;
     .rights{
         font-size: 10px;
         color: black;
+        transition: .4;
     }
 }
