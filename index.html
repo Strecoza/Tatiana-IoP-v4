@@ -25,10 +25,14 @@
     </header>
     <main>
         <h1 class = "title">Tatiana</h1>
+
+        <!--ABOUT SECTION-->
         <section id = "About" class = "about section">
             <h2>About</h2>
             <p>Frontend Developer with a passion for learning about the latest web technologies.<br> Dream of working in an Agile environment at a mission-driven organization and building projects that create an impact.</p>
         </section>
+
+        <!--PROJECTS SECTION-->
         <section id = "Projects" class = "section">
             <h2>Projects</h2>
             <ul>
@@ -37,6 +41,8 @@
                 <li>Test for kids</li>
             </ul>
         </section>
+
+        <!--EXPERIENCE SECTION-->
         <section id = "Experience" class = "section">
             <h2>Experience</h2>
             <ul>
@@ -45,11 +51,15 @@
                 <li>Coffee shop</li>
             </ul>
         </section>
+
+        <!--SKILLS SECTION-->
         <section id = "skills" class = "section">
             <h2>Skills</h2>
             <ul>
             </ul>
         </section>
+
+        <!--CONNECT SECTION-->
         <section id = "Connect" class = "section">
             <h2>Connect</h2>
             <ul class = "connect">
@@ -57,6 +67,27 @@
                 <li><a class = "links fa fa-github" aria-hidden="true" href = "https://github.com/Strecoza"></a></li>
                 <li><a class = "links" href = "https://portfolio-tp.glitch.me">My website</a></li>
             </ul>
+        </section>
+    
+        <!--FORM FOR CONNECT/MESSAGE SECTION-->
+        <section class = "messagesSectoin">
+            <h2>Leave a Message</h2>
+            <form class="messagesForm" name = "leave_message">
+                <label class = "formLabels" for = "usersName">Your name:</label>
+                <input type = "text" name = "usersName" class = "usersName" required><br>
+
+                <label class = "formLabels" for = "usersEmail">Your email:</label>
+                <input typr = "email" name = "usersEmail" class = "usersEmail" required></textarea><br> 
+
+                <label class = "formLabels" for = "usersMessage">Your message:</label>
+                <textarea name = "usersMessage" class = "usersMessage" required></textarea><br> 
+                <button type = "submit"> Submit </button>
+            </form>
+        </section>
+        <!--WRITTEN MESSAGES WITH OPTION TO DELETE-->
+        <section id = "messages" class = "messages">
+            <h2>Messages</h2>
+            <ul> </ul>
         </section>
     </main>
     <footer>
