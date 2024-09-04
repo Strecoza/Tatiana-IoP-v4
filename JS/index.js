@@ -57,4 +57,27 @@ messageForm.addEventListener('submit', (e) => {
     messageForm.reset();
 })
 
-
+// fetch API request from GitHub 
+const myGitHubName = 'Strecoza';
+fetch(`https://api.github.com/users/${myGitHubName}/repos`)
+    .then((response) => {
+        if(!response.ok){
+            throw new Error ('Request failed');
+        } else {
+            return response.text();
+            //console.log(response);
+        }   
+        })
+    .then((data) => {
+        const repos = JSON.parse(data);
+        console.log(repos);
+        const projectList = document.getElementById ('Projects').querySelector('ul');
+        for( let repo of repos){
+            let project = document.createElement('li');
+            project.innerText = repo.name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch ((error) => {
+        console.error('Error', error);
+});
