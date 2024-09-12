@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name = "description" content = "HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
     <link rel = 'stylesheet' href = 'css/index.css'> 
@@ -13,13 +13,24 @@
 </head>
 <body>
     <header>
+        <div class = "hamburger">
+            <div>
+                <span></span> 
+            </div>
+        </div>
+
+
         <nav id = "navmenu">
-            <ul class = "navlist">
-                <li><a href = "#About">About</a></li>
-                <li><a href = "#Projects">Projects</a></li>
-                <li><a href = "#Experience">Experience</a></li>
-                <li><a href = "#Skills">Skills</a></li>
-                <li><a href = "#Connect">Connect</a></li>
+            <a href = "#" class = "logo">
+                <img class = "logoImg" alt = "author logo" src ="images/tp-logo.png">
+            </a>
+            <ul class = "navList">
+                <li class="navItem"><a href = "#About">About</a></li>
+                <li class="navItem"><a href = "#Projects">Projects</a></li>
+                <li class="navItem"><a href = "#Experience">Experience</a></li>
+                <li class="navItem"><a href = "#Skills">Skills</a></li>
+                <li class="navItem"><a href = "#LeaveMessage">Leave a Message</a></li>
+                <li class="navItem"><a href = "#Connect">Connect</a></li>
             </ul>
         </nav>
     </header>
@@ -28,25 +39,28 @@
 
         <!--ABOUT SECTION-->
         <section id = "About" class = "about section">
-            <h2>About</h2>
-            <p>Frontend Developer with a passion for learning about the latest web technologies.<br> Dream of working in an Agile environment at a mission-driven organization and building projects that create an impact.</p>
-            
-        </section>
-
-        <!--PROJECTS SECTION-->
-        <section id = "Projects" class = "section">
-            <h2>Projects</h2>
-            <ul class = "repositories">
-            </ul>
+            <div class = "grid-container">
+                <div class = "aboutMe">
+                    <h2 class="aboutTitle">About</h2>
+                    <p>HI! My name is Tatiana and I'm on my way to become Fullstack Developer. <br>Since I began my journey in web development, I’ve been continuously refining and expanding my coding skills. I specialize in creating interactive websites and apps using HTML, CSS, JavaScript.
+                    <br>With my background in social psychology, I trying to apply valuable insights into user behavior to design websites that deliver better, more user-friendly experiences. To sharpen my expertise, I’ve actively pursued courses in HTML, JavaScript, debugging, and inclusive design.
+                    <br>I’m always eager to explore new technologies and grow portfolio. I’m ready to help bring your project to life with engaging and high-quality results.</p>
+                </div>
+                <div class ="itgirl">
+                    <img src = "images/itgirl.png"  alt = "girl with laptop">
+                </div>
+            </div>       
         </section>
 
         <!--EXPERIENCE SECTION-->
         <section id = "Experience" class = "section">
-            <h2>Experience</h2>
-            <ul>
-                <li>To do list</li>
-                <li>Split the bill</li>
-                <li>Coffee shop</li>
+            <h2 class = "experienceTitle">Experience</h2>
+            <ul class = "experienceGrid">
+                <li><b>2024</b><p>- Code the Dream. IoP</p></li>
+                <li><b>2022 - 2024</b><p>- Can She Code Inc.</p></li>
+                <li><b>2021</b><p>- Web Design Essentials in Ohlone College</p></li>
+                <li><b>2017 - 2019</b> <p>- QA Manuel  in Be2Future</p></li>
+                <li><b>2014 - 2017</b><p>- Support specialist in Real Estate bussines</p></li>
             </ul>
         </section>
 
@@ -57,18 +71,15 @@
             </ul>
         </section>
 
-        <!--CONNECT SECTION-->
-        <section id = "Connect" class = "section">
-            <h2>Connect</h2>
-            <ul class = "connect">
-                <li><a class = "links fa fa-linkedin" aria-hidden="true" href = "https://www.linkedin.com/in/tatianapr1p1snova/" target = "_blank"  rel="noopener noreferrer"></a></li>
-                <li><a class = "links fa fa-github" aria-hidden="true" href = "https://github.com/Strecoza"></a></li>
-                <li><a class = "links" href = "https://portfolio-tp.glitch.me">My website</a></li>
+         <!--PROJECTS SECTION-->
+         <section id = "Projects" class = "section">
+            <h2>Projects</h2>
+            <ul class = "repositories">
             </ul>
         </section>
     
         <!--FORM FOR CONNECT/MESSAGE SECTION-->
-        <section class = "messagesSectoin">
+        <section id = "LeaveMessage" class = "messagesSectoin">
             <h2>Leave a Message</h2>
             <form class="messagesForm" name = "leave_message">
                 <label class = "formLabels" for = "usersName">Your name:</label>
@@ -89,7 +100,15 @@
         </section>
     </main>
     <footer>
-       
+        <!--CONNECT SECTION-->
+        <section id = "Connect" class = "section">
+            <h2>Connect</h2>
+            <ul class = "connect">
+                <li><a class = "links fa fa-linkedin" aria-hidden="true" href = "https://www.linkedin.com/in/tatianapr1p1snova/" target = "_blank"  rel="noopener noreferrer"></a></li>
+                <li><a class = "links fa fa-github" aria-hidden="true" href = "https://github.com/Strecoza"></a></li>
+                <li><a class = "links" href = "https://portfolio-tp.glitch.me">My website</a></li>
+            </ul>
+        </section>
     </footer>
     <script src = "js/index.js"></script>
 </body>
