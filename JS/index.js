@@ -65,14 +65,16 @@ fetch(`https://api.github.com/users/${myGitHubName}/repos`)
             throw new Error ('Request failed');
         } else {
             return response.text();
-            //console.log(response);
         }   
         })
     .then((data) => {
         const repos = JSON.parse(data);
-        console.log(repos);
+       // console.log(repos);
         const projectList = document.getElementById ('Projects').querySelector('ul');
-        for( let repo of repos){
+
+        const sliceRepos = repos.slice(0,6);
+
+        for( let repo of sliceRepos){
             let project = document.createElement('li');
             project.innerText = repo.name;
             projectList.appendChild(project);
