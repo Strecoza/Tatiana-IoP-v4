@@ -3,20 +3,24 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:  Roboto, sans-serif;
     background-color: #E7E0D8;
 }
 /*--HEADER--*/
 header{
-    height: 100px;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100vw;
-    min-width: 250px;
+    height: 70px;
+    background-color: #427074;
+}
+/*---Burger menu---*/
+.burgerMenu{
+    display: none;
 }
 
-/*--------NavMenu--------*/
+/*---NavMenu---*/
 #navmenu{ 
     width: 100vw;
     min-height: 70px;
@@ -25,7 +29,6 @@ header{
     align-items: center;
     text-align: center;
     padding: 0 24px;
-    background-color: #427074;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -35,11 +38,11 @@ header{
 .logo{
     padding: 0;
     margin: 0;
+    flex-shrink: 0;
 }
 
 .logoImg{
-    width: 40px;
-    height: 40px;
+    height: 50px;
 }
 
 a:hover img{
@@ -48,23 +51,25 @@ a:hover img{
 }
 
 .navList{
-    padding: 0 20px;
-    display: flex;
-    flex-direction: row;
-   justify-content: space-around;
-    font-size: 1em;
+    padding: 0 30px 0 20px;
+    display: flex; 
+    font-size: 18px;
     list-style-type: none;
-    margin: 1rem;
+    margin: 0;
+}
+
+.navList.open{
+    display: flex;
+    z-index: 1000;
 }
 
 .navItem {
     justify-content: space-between;
+    margin-right: 20px;
 }
 
 #navmenu  a{
-    /*color: rgb(83, 50, 5);*/
     color: black;  
-    margin: 10px;
     padding: 0;
     text-decoration: none;
     text-shadow: 0 2px 2px #515253;
@@ -75,15 +80,13 @@ a:hover img{
     text-shadow: 1px 2px 0 #c7c5c5, 1px 3px 3px #d4d2d2;
 }
 
-/*--MAIN with sections--*/
+/*---MAIN with sections---*/
 main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 5px auto 0 auto;
-    background-image: url("../images/colorpencils.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -148,7 +151,7 @@ align-items: center;
 max-width: 800px;
 min-width: 300px;
 margin: 0 auto;
-transition: max-width .5s easy-in-out, min-width .5s sy-in-out;
+transition: max-width .5s ease-in-out, min-width .5s ease-in-out;
 }
 
 .aboutTitle{}
@@ -158,7 +161,7 @@ transition: max-width .5s easy-in-out, min-width .5s sy-in-out;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    max-width: 400px;
+  
     color: #05222A;
 }
 
@@ -239,7 +242,7 @@ transition: max-width .5s easy-in-out, min-width .5s sy-in-out;
 }
 
 /*---Form for messages---*/
-.messagesSectoin{}
+.messagesSection{}
 .messagesForm{}
 .formLabels{}
 .usersName{}
@@ -301,6 +304,10 @@ footer{
 }
 
 @media screen and (max-width: 690px){
+    #navmenu ul{
+        transition: .4s;
+        font-size: 14px;
+    }
     .experienceGrid{
         grid-template-columns: repeat(2,1fr);
     }
@@ -309,30 +316,72 @@ footer{
     }
 }
 
-@media screen and (max-width: 580px){
+@media screen and (max-width: 600px){
     body{
         background-color: #d4d2d2;
     }
-    #navmenu ul{
-        transition: .4s;
-        font-size: 12px;
-    }
-
     p{
         font-style: italic;
         text-align: center;
     }
+    #navmenu{
+        justify-content: space-around;
+    }
+    .burgerMenu{
+        display: flex;
+        cursor: pointer;
+        align-items:center;
+        justify-items:center;
+        margin-right: 30px;
+    }
+    .burgerIcon{
+        width: 50px;
+        transition: transform .3s ease-in-out;
+    }
+    .burgerIcon:hover {
+        transition-duration: 2s;
+        transform: scale(1.3);
+    }
+    .burgerIcon.rotate{
+        transform: rotate(90deg);
+    }
+    .navList{
+        display: none;
+        visibility: hidden;
+        
+    }
+    .navList.open {
+        display: flex;
+        z-index: 1000;
+        visibility: visible;
+        opacity: 1;
+        overflow: auto;
+        position: absolute;
+        flex-direction:column;
+        width: 100%;
+        text-align: center;
+        top: 70px;
+        right: 0;
+        background-color: #69989e; 
+        box-shadow: 0px 3px 6px #7ebac1;
+    }
 
+    .navList.open > .navItem {
+        display:block;
+        padding: 10px 0;
+        opacity: 1;
+    }
+    .navList.open .navItem a {
+        color:#772125;
+    }
     .grid-container{
         grid-template-columns: 1fr;
         grid-template-areas: "itgirl" "text";
     }
-
     .itgirl{
         justify-content: center;
         align-items: center;
     }
-
     .aboutMe{
         justify-content: center;
         align-items: center;
@@ -343,23 +392,11 @@ footer{
 }
 
 @media screen and (max-width: 480px){
-
-    #navmenu ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 16px;
-        transition: .5s;
-    }
     .title{
         transition: .5s;
-        margin-top: 100px;
-        color: blueviolet;
+        margin-top: 50px;
+        color: rgb(92, 8, 95);
         text-decoration: none;
-    }
-    #navmenu  a:hover, a:active {
-        text-shadow: 1px 2px 0 #E7E0D8 , 1px 3px 3px red;
-        transition: .2s;
     }
     .rights{
         font-size: 11px;
