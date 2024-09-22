@@ -1,5 +1,5 @@
 //----SKILLS SECTION----//
-let skills = ["JavaScript", "HTML", "CSS", "GitHub"];
+let skills = ["JavaScript", "HTML", "CSS", "Git"];
 let skillsSection = document.querySelector('#skills');
 let skillsList = skillsSection.querySelector('ul');
 for (let i = 0; i < skills.length; i++){
@@ -81,3 +81,16 @@ fetch(`https://api.github.com/users/${myGitHubName}/repos`)
     .catch ((error) => {
         console.error('Error', error);
 });
+
+//Burger menu
+
+document.querySelector('.burgerMenu').addEventListener('click', function(){
+    const navigation = document.querySelector('.navList');
+    const burgerIcon = document.querySelector('.burgerIcon');
+    if(navigation&&burgerIcon) {
+        navigation.classList.toggle('open');
+        burgerIcon.classList.toggle('rotate');
+    } else{
+        console.error('navList not found');
+    }
+})
