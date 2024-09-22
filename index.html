@@ -28,7 +28,7 @@
                 <li class="navItem"><a href = "#About">About</a></li>
                 <li class="navItem"><a href = "#Projects">Projects</a></li>
                 <li class="navItem"><a href = "#Experience">Experience</a></li>
-                <li class="navItem"><a href = "#Skills">Skills</a></li>
+                <li class="navItem"><a href = "#skills">Skills</a></li>
                 <li class="navItem"><a href = "#LeaveMessage">Leave a Message</a></li>
                 <li class="navItem"><a href = "#Connect">Connect</a></li>
             </ul>
@@ -81,14 +81,14 @@
         </section>
     
         <!--FORM FOR CONNECT/MESSAGE SECTION-->
-        <section id = "LeaveMessage" class = "messagesSectoin">
-            <h2>Leave a Message</h2>
+        <section id = "LeaveMessage" class = "messagesSection">
+            <div><h2>Leave a Message</h2></div>
             <form class="messagesForm" name = "leave_message">
                 <label class = "formLabels" for = "usersName">Your name:</label>
                 <input type = "text" name = "usersName" class = "usersName" required><br>
 
                 <label class = "formLabels" for = "usersEmail">Your email:</label>
-                <input typr = "email" name = "usersEmail" class = "usersEmail" required></textarea><br> 
+                <input type = "email" name = "usersEmail" class = "usersEmail" required><br> 
 
                 <label class = "formLabels" for = "usersMessage">Your message:</label>
                 <textarea name = "usersMessage" class = "usersMessage" required></textarea><br> 
@@ -100,18 +100,25 @@
             <h2>Messages</h2>
             <ul> </ul>
         </section>
+         <!--CONNECT SECTION-->
+         <section id = "Connect" class = "section">
+            <h2>Connect</h2>
+            <ul class = "connect">
+                <li><a class = "link linkedin" aria-hidden="true" href = "https://www.linkedin.com/in/tatianapr1p1snova/" target = "_blank"  rel="noopener noreferrer">
+                    <img src = "/images/logo-linkedin.png" alt="Site portfolio">
+                </a></li>
+                <li><a class = "link github" aria-hidden="true" href = "https://github.com/Strecoza">
+                    <img src = "/images/logo-github.png" alt="Site portfolio">
+                </a></li>
+                <li><a class = "link logo" href = "https://portfolio-tp.glitch.me">
+                    <img src = "/images/tp-logo.png" alt="Site portfolio">
+                </a></li>
+            </ul>
+        </section>
     </main>
     <!---FOOTER--->
     <footer>
-        <!--CONNECT SECTION-->
-        <section id = "Connect" class = "section">
-            <h2>Connect</h2>
-            <ul class = "connect">
-                <li><a class = "links fa fa-linkedin" aria-hidden="true" href = "https://www.linkedin.com/in/tatianapr1p1snova/" target = "_blank"  rel="noopener noreferrer"></a></li>
-                <li><a class = "links fa fa-github" aria-hidden="true" href = "https://github.com/Strecoza"></a></li>
-                <li><a class = "links" href = "https://portfolio-tp.glitch.me">My website</a></li>
-            </ul>
-        </section>
+       
     </footer>
     <script src = "js/index.js"></script>
 </body>

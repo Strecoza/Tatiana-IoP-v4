@@ -33,7 +33,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #427074;
+    background-color: #87b0b5;
 }
 
 .logo{
@@ -127,7 +127,7 @@ li {
 h2 {
     font-size: 24px;
     color:#772125	;
-    font-family: "Montserrat Alternates", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     font-style: italic;
 }
@@ -155,7 +155,9 @@ margin: 0 auto;
 transition: max-width .5s ease-in-out, min-width .5s ease-in-out;
 }
 
-.aboutTitle{}
+.aboutTitle{
+    text-align: center;
+}
 
 .aboutMe{
     display: flex;
@@ -195,6 +197,7 @@ transition: max-width .5s ease-in-out, min-width .5s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
 }
 
 .experienceTitle{
@@ -223,35 +226,197 @@ transition: max-width .5s ease-in-out, min-width .5s ease-in-out;
 }
 
 /*---Skills---*/
-#skills{}
-
-/*---Projects---*/
-#Projects{}
-
-/*---Connect---*/
-#Connect{}
-
-.connect{
- display: flex;
- flex-direction:row;
- justify-content: space-around;
- list-style-type: none;
+#skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
 }
 
-.fa-linkedin, .fa-github{
-    width: 20px;
+#skills ul{
+    display:flex;
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+#skills ul li{
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #0b4451;
+    text-shadow: 0 3px  10px#0b4451; 
+}
+
+/*---Projects---*/
+
+#Projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Projects ul{
+    display:flex;
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+#Projects ul li{
+    text-align: center;
+    background-color: #aac6ca;
+    margin: 10px 20px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    color:#05222A;
 }
 
 /*---Form for messages---*/
-.messagesSection{}
-.messagesForm{}
-.formLabels{}
-.usersName{}
-.usersEmail{}
-.usersMessage{}
+#LeaveMessage{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    max-width: 800px;
+}
 
+.messagesSection h2{
+    margin: 50px auto;
+}
+
+.messagesForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #a5b4b6;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.messagesForm button,
+.usersName,
+.usersEmail,
+.usersMessage{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.messagesForm button{
+    background-color: #4A151B ;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    height: 50px;
+}
+
+.messages ul button:hover,
+.messagesForm button:hover {
+    background-color: #772125;
+}
 /*---Written messages section---*/
-.messages{}
+.messages{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    min-width: 250px;
+    max-width: 800px;
+    padding: 0;
+}
+
+.messages ul{
+    display:flex;
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+    padding: 0;
+}
+
+.messages li{
+    background-color: #aac6ca;
+    margin: 10px 20px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.messages ul a{
+    display: flex;
+    color: #4A151B;
+    padding:  0 25px;
+    margin: 5px auto;
+}
+
+.messages ul button{
+    background-color: #601c24 ;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 5px auto;
+}
+
+/*---Connect---*/
+#Connect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.connect{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    min-width: 250px;
+    max-width: 800px;
+}
+.connect ul{
+    display:flex;
+   
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 20px;
+    padding: 0;
+    
+}
+
+.connect li{
+    margin: 10px;
+}
+
+.connect img{
+    height: 30px;
+}
 
 /*---FOOTER---*/
 footer{
@@ -272,7 +437,7 @@ footer{
 /*---Responsive---*/
 @media screen and (min-width: 1200px){
     #navmenu{ 
-        background-color: #336d75;
+        background-color: #71a8af;
         transition: .1s;
     }
     p{
@@ -363,7 +528,7 @@ footer{
         text-align: center;
         top: 70px;
         right: 0;
-        background-color: #81abb1; 
+        background-color: #87b0b5; 
         box-shadow: 0px 3px 6px #7ebac1;
     }
 
