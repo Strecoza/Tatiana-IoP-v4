@@ -402,12 +402,10 @@ transition: max-width .5s ease-in-out, min-width .5s ease-in-out;
 }
 .connect ul{
     display:flex;
-   
     flex-direction: row;
     align-items: center;
     margin: 10px 20px;
     padding: 0;
-    
 }
 
 .connect li{
@@ -415,7 +413,7 @@ transition: max-width .5s ease-in-out, min-width .5s ease-in-out;
 }
 
 .connect img{
-    height: 30px;
+    height: 50px;
 }
 
 /*---FOOTER---*/
